@@ -29,3 +29,8 @@ variable "labels" {
   description = "List of labels to attach to the VM instance."
   type        = map
 }
+
+variable "credentials" {
+  description = "user to connections settings"
+  type        = string
+}
