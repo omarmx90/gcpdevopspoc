@@ -8,7 +8,7 @@ pipeline {
             checkout scm
         }
     }
-	        stage('Preparation') {
+	        stage('TF Apply & Destroy') {
 	            steps {
 	                sh "ls"
 	                sh '''
