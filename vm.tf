@@ -21,3 +21,12 @@ resource "google_compute_instance" "vm" {
 
   metadata_startup_script = data.template_file.nginx.rendered
 }
+
+resource "google_compute_firewall" "default" {
+  name    = "allow-jenkins"
+  network = "default"
+  allow {
+    protocol = "tcp"
+    ports    = ["80"]
+  }
+}
