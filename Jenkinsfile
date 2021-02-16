@@ -15,11 +15,11 @@ pipeline {
 	                  curl -o tf.zip https://releases.hashicorp.com/terraform/0.14.6/terraform_0.14.6_linux_amd64.zip ; yes | unzip tf.zip
 	                    ./terraform version
 	                    ./terraform init
-                        if [ $action = ‘plan’ ]; then
+                        if [ $action = 'plan' ]; then
                          terraform plan > plan.out
-                        elif [ $action = ‘apply’ ]; then
+                        elif [ $action = 'apply' ]; then
                          terraform apply — auto-approve
-                        elif [ $action = ‘destroy’ ]; then
+                        elif [ $action = 'destroy' ]; then
                          terraform destroy — auto-approve
                         fi
 	                '''
