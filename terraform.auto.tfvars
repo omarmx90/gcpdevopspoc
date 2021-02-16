@@ -1,4 +1,4 @@
-  project_id = "durable-pulsar-304915"
+  project_id = "devops-304923"
 
   labels     = {
     "environment" = "dev"
