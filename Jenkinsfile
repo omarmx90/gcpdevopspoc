@@ -16,11 +16,11 @@ pipeline {
 	                    ./terraform version
 	                    ./terraform init
                         if [ $action = 'plan' ]; then
-                        ./terraform plan > plan.out
+                         ./terraform plan > plan.out
                         elif [ $action = 'apply' ]; then
-                        ./terraform apply — auto-approve
+                         ./terraform apply -auto-approve
                         elif [ $action = 'destroy' ]; then
-                        ./terraform destroy — auto-approve
+                         ./terraform destroy -auto-approve
                         fi
 	                '''
 	            }
