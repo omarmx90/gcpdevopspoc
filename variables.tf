@@ -16,7 +16,7 @@ variable "zone" {
 variable "name" {
   description = "Web server name."
   type        = string
-  default     = "my-webserver"
+  default     = "iac-server"
 }
 
 variable "machine_type" {

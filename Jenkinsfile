@@ -10,12 +10,10 @@ pipeline {
     }
 	        stage('TF Apply & Destroy') {
 	            steps {
-	                sh "ls"
 					sh  '''
 					cp /var/developer.json .
 					cp /var/id_rsa.pub .
 					'''
-					sh "ls"
 	                sh '''
 	                  curl -o tf.zip https://releases.hashicorp.com/terraform/0.14.6/terraform_0.14.6_linux_amd64.zip ; yes | unzip tf.zip
 	                    ./terraform version

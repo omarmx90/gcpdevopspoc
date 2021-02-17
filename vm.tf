@@ -24,7 +24,7 @@ metadata = {
 }
 
 resource "google_compute_firewall" "default" {
-  name    = "allow-jenkins"
+  name    = "allow-http"
   network = "default"
   allow {
     protocol = "tcp"
