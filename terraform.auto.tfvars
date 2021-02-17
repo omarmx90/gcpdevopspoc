@@ -3,7 +3,7 @@
   labels     = {
     "environment" = "dev"
     "team"        = "devops"
-    "application" = "webserver"
+    "application" = "iac"
   }
 
   region = "us-central1"

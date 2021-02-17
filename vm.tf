@@ -3,7 +3,7 @@ resource "google_compute_instance" "vm" {
   name         = var.name
   machine_type = var.machine_type
   zone         = var.zone
-  tags         = ["http-server"]
+  tags         = ["iac"]
   labels       = var.labels
 
   boot_disk {
