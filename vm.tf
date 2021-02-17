@@ -18,8 +18,9 @@ resource "google_compute_instance" "vm" {
       // Ephemeral IP
     }
   }
-
-  metadata_startup_script = data.template_file.nginx.rendered
+metadata = {
+		ssh-keys = "ubuntu:${file("id_rsa.pub")}"
+	}
 }
 
 resource "google_compute_firewall" "default" {
