@@ -11,12 +11,14 @@ pipeline {
 	        stage('TF Apply & Destroy') {
 	            steps {
 	                sh "ls"
+					sh  '''
+					cp /var/credentials.json .
+					cp /var/id_rsa.pub .
+					'''
 	                sh '''
 	                  curl -o tf.zip https://releases.hashicorp.com/terraform/0.14.6/terraform_0.14.6_linux_amd64.zip ; yes | unzip tf.zip
 	                    ./terraform version
 	                    ./terraform init
-						cp /var/credentials.json .
-						cp /var/id_rsa.pub .
                         if [ $action = 'plan' ]; then
                          ./terraform plan > plan.out
                         elif [ $action = 'apply' ]; then
