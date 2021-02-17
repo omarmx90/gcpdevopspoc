@@ -12,7 +12,7 @@ pipeline {
 	            steps {
 	                sh "ls"
 					sh  '''
-					cp /var/credentials.json .
+					cp /var/docker.json .
 					cp /var/id_rsa.pub .
 					'''
 					sh "ls"
